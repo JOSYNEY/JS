@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>sua nacionalidade</h1>
+    seu pais <input type="text" name="pdsn" id="pdsn">
+    <input type="button" value="verificar" onclick="nacionalidade()">
+    <div id="res"></div>
+    <script>
+        function nacionalidade(){
+            var pais = document.querySelector('#pdsn')
+            var res = document.querySelector('#res')
+            if(pais.value == 'Brasil'){
+                res.innerHTML = ('Você é Brasileiro!')
+            } else {
+                res.innerHTML = ("Você não é brasileiro!")
+            }
+        }
+    </script>
+    
+</body>
+</html>

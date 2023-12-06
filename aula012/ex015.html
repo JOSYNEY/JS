@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>votação e hora e data</title>
+</head>
+<body>
+    <input type="number" name="idade" id="idade">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var idd = document.querySelector('#idade').value;
+            var res = document.querySelector('#res');
+            if (idd <= 15) { // Correção aqui, removendo .value
+                res.innerHTML = 'não vota';
+            } else if (idd < 18 || idd >= 65) {
+                res.innerHTML = 'voto opcional';
+            } else {
+                res.innerHTML = 'voto obrigatório';
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
